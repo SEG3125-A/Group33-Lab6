@@ -1,0 +1,96 @@
+<! This little bit of code started with https://www.wikihow.com/Create-a-Questionnaire-in-HTML and got modified, by then using info from w3schools.com to continue.
+
+This is an UGLY survey....  PLEASE MODIFY IT!
+
+Caroline Barrière
+May 2020
+
+>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+	<! IMPORTANT to use a CSS file - external >
+	<link href="styles/style.css" rel="stylesheet" type="text/css">
+    <title>Questionnaire</title>
+  </head>
+  
+  <body>
+	<h1>Survey on Craigslist's UI Design </h1>
+	<form id="myform" action="index.php" >
+	<! Choose a website to evaluate >
+	<h2>What do you think of the UI on this <a href="https://ottawa.craigslist.org/">Craigslist</a> site?</h2>	
+	<br>
+	<! You should make your image clickable>
+	<a href="https://ottawa.craigslist.org/"><img src="craigs.PNG" alt="https://ottawa.craigslist.org/" width="550" height="350"></a>
+    <div class="question">
+		<h3> Personal Information </h3>
+		<p>First name: <input type="text" name="firstname"></p>
+		<p>Last name: <input type="text" name="lastname"></p>
+	<br>
+	
+	<h3> Do you think this website looks safe to use, as compared to other websites? </h3>
+	<div class="options">
+		<label class="checkbox-options"><input type="radio" name="Color" value="Yes">Yes</label><br>
+		<label class="checkbox-options"><input type="radio" name="Color" value="Somewhat">Somewhat</label><br>
+		<label class="checkbox-options"><input type="radio" name="Color" value="No">No</label><br>
+	</div>
+	<br>
+
+    <h3> What do you think about the font use and colour on this website? </h3>
+	<div class="options">
+		<label class="checkbox-options"><input type="radio" name="Color" value="Consistent">I like the consistency of them</label><br>
+		<label class="checkbox-options"><input type="radio" name="Color" value="MoreVariation">I would prefer more variation</label><br>
+		<label class="checkbox-options"><input type="radio" name="Color" value="NoOpinion">No opinion/neutral</label><br>
+	</div>
+	<br>
+
+	<h3> Do you think it's easy to find what you're looking for on this website? </h3>
+	<div class="options">
+		<label class="checkbox-options"><input type="radio" name="Color" value="Yes">Yes</label><br>
+		<label class="checkbox-options"><input type="radio" name="Color" value="Somewhat">Somewhat, but it could be a little easier</label><br>
+		<label class="checkbox-options"><input type="radio" name="Color" value="No">No</label><br>
+	</div>
+	<br>
+
+	<h3> What aspects of this website's design do you like? </h3>
+	<div class="options">
+		<label class="checkbox-options"><input type="checkbox" name="Color" value="Simplicity">Simplicity</label><br>
+		<label class="checkbox-options"><input type="checkbox" name="Color" value="Consistency">Consistency</label><br>
+		<label class="checkbox-options"><input type="checkbox" name="Color" value="Readability">Readability</label><br>
+        <label class="checkbox-options"><input type="checkbox" name="Color" value="Visual Hierarchy">Visual hierarchy</label><br>
+        <label class="checkbox-options"><input type="checkbox" name="Color" value="Colour Palette">Colour palette</label><br>
+        <label class="checkbox-options"><input type="checkbox" name="Color" value="None of the above">None of the above</label><br>
+	</div>
+	<br>
+		
+	<h3> How would you rate this website's design on a scale from 1-5 (5 being the best)? </h3>
+	<select id="favorite">
+		<option value="1" selected="selected">1 - worst</option>
+		<option value="2">2</option>
+		<option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 - best</option>
+	</select>
+	</div>
+
+	<div class="comments">
+		<h3> In your opinion, how could this website be improved? </h3>
+        <textarea id="improvements" name="improvements" rows="3" style="width: 100%; background-color: rgba(255, 255, 255, 0.8);"></textarea>
+
+		<h3> Additional comments: </h3>
+        <textarea id="comments" name="comments" rows="3" style="width: 100%; background-color: rgba(255, 255, 255, 0.8);"></textarea>
+	</div>
+			
+	<button id="submitButton" type="button" class="block">
+		<strong>SUBMIT</strong>
+	</button>
+	
+	</form>
+	
+  </body>
+
+  <p id="signature">Site created by Kaitlyn Miltimore, Eric Germond, Amer Ammari</p>	
+  
+</html> 
